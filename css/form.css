@@ -1,0 +1,10 @@
+.form {
+    display: grid;
+}
+
+.form__button {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color:teal;
+    cursor: pointer;
+}

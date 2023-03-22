@@ -41,6 +41,6 @@
         form.addEventListener("submit", onFormSubmit);
     };
 
-init();
+    init();
 
 }

@@ -4,11 +4,12 @@
     grid-gap: 20px;
 }
 
-@media (max-width 767px) {
+@media (max-width: 767px) {
     .form {
-        width: 100%
+        grid-template-columns: 1fr;
     }
 }
+
 
 .form__button {
     text-decoration: none;
@@ -16,5 +17,5 @@
     background-color:teal;
     border: none;
     cursor: pointer;
-
 }
+

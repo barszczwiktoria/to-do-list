@@ -12,7 +12,7 @@
 
 .form__input {
 padding: 10px;
-
+ 
 
 }
 .form__button {
@@ -24,3 +24,10 @@ padding: 10px;
     padding: 10px;
 }
 
+.form__button:hover {
+    background: rgba(1, 114, 114, 0.789);
+}
+
+.form__button:active {
+    background: rgba(69, 151, 151, 0.789);
+}

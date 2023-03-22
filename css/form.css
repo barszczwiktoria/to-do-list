@@ -10,12 +10,17 @@
     }
 }
 
+.form__input {
+padding: 10px;
 
+
+}
 .form__button {
     text-decoration: none;
     color: whitesmoke;
     background-color:teal;
     border: none;
     cursor: pointer;
+    padding: 10px;
 }
 

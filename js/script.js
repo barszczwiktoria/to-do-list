@@ -2,14 +2,13 @@
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent
+        tasks.push({ content: newTaskContent
         });
         render();
     };
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex);
+        tasks.splice(taskIndex, 1);
         render();
     };
 
@@ -18,8 +17,30 @@
         render();
     }
 
+    const bindRemoveTaskEvents = () => {
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButton, taskIndex) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(taskIndex);
+            });
+        });
+    }
+
+    const bindToggleDoneEvents = () => {
+        const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
+
+        toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
+            toggleDoneButton.addEventListener("click", () => {
+                toggleTaskDone(taskIndex);
+            });
+        });
+    }
+
+
     const render = () => {
         let htmlString = "";
+          
         for (const task of tasks) {
             htmlString += `
     <li class="tasks__item js-tasks"> 
@@ -33,24 +54,12 @@
     </button>
     </li>
     `;
-        }
+}
+
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-        const removeButtons = document.querySelectorAll(".js-remove");
-
-        removeButtons.forEach((removeButton, taskIndex) => {
-            removeButton.addEventListener("click", () => {
-                removeTask(taskIndex);
-            });
-        });
-
-        const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
-
-        toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
-            toggleDoneButton.addEventListener("click", () => {
-                toggleTaskDone(taskIndex);
-            });
-        });
+        bindRemoveTaskEvents();
+        bindToggleDoneEvents();
     };
 
     const onFormSubmit = (event) => {
@@ -73,5 +82,6 @@
 
         addNewTask();
     };
+
     init();
 }

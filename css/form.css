@@ -12,9 +12,8 @@
 
 .form__input {
 padding: 10px;
- 
-
 }
+
 .form__button {
     text-decoration: none;
     color: whitesmoke;
@@ -31,3 +30,4 @@ padding: 10px;
 .form__button:active {
     background: rgba(69, 151, 151, 0.789);
 }
+

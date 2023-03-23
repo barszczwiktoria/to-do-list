@@ -3,19 +3,19 @@
     margin: 0;
     padding: 0;
 }
-  
+
 .tasks__item {
-display: grid;
-grid-template-columns: auto 1fr auto;
-grid-gap: 15 px;
-align-items: center;
-padding:  15px;
-border-bottom: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 15 px;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
 }
 
 .tasks__content--done {
     text-decoration: line-through;
-    }
+}
 
 .tasks__button {
     border: none;
@@ -31,5 +31,5 @@ border-bottom: 1px solid #ccc;
 }
 
 .tasks__button--remove {
-    background: red ;
+    background: red;
 }

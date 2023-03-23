@@ -2,7 +2,8 @@
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({ content: newTaskContent
+        tasks.push({
+            content: newTaskContent
         });
         render();
     };
@@ -37,10 +38,9 @@
         });
     }
 
-
     const render = () => {
         let htmlString = "";
-          
+
         for (const task of tasks) {
             htmlString += `
             <li class="tasks__item js-tasks"> 

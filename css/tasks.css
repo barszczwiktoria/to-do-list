@@ -10,7 +10,7 @@ grid-template-columns: auto 1fr auto;
 grid-gap: 15 px;
 align-items: center;
 padding:  15px;
-border-bottom: 0.5px solid #ccc;
+border-bottom: 1px solid #ccc;
 }
 
 .tasks__content--done {

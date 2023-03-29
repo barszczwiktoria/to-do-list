@@ -39,7 +39,7 @@
 }
 
 .tasks__button--remove {
-    background: hsl(350, 80%, 40%);
+    background: red;
 }
 
 .tasks__button--remove:hover {
@@ -47,4 +47,4 @@
 }
 
 .tasks__button--done:active {
-    background: hsl(350, 80%, 60%);
+    background: hsl(350, 80%, 40%);

@@ -18,5 +18,3 @@ My next project is a simple to do list where you can add tasks, mark them as don
 - ES6+ features
 
 
-
-# toDoNewButtons

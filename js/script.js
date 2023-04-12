@@ -1,12 +1,10 @@
 {
     const tasks = [];
-let hideDoneTasks = false; 
 
     const addNewTask = (newTaskContent) => {
-        tasks = [
-            ...tasks, 
-            {content: newTaskContent },
-        ];
+        tasks.push({
+            content: newTaskContent
+        });
         render();
     };
 
@@ -40,7 +38,7 @@ let hideDoneTasks = false;
         });
     }
 
-    const renderTasks = () => {
+    const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -60,23 +58,8 @@ let hideDoneTasks = false;
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-    };
-
-    const renderButtons = () => {
-
-    };
-
-const bindButtonsEvents = () => {
-
-};
-
-    const render = () => {
-        renderTasks();
-        renderButtons();
-
         bindRemoveTaskEvents();
         bindToggleDoneEvents();
-        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
